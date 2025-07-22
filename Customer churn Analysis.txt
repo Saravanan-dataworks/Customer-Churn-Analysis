@@ -1,0 +1,117 @@
+
+# Churn Distribution ------------------------------------------------------
+
+ggplot(customer_data,aes(x=Churn),fill=Churn) +
+  geom_bar(aes(fill=Churn),width = 0.3,position = "dodge") +
+  scale_fill_manual(values = c("steelblue","orange")) +
+  labs(title = "Customer Churn Distribution",
+       x= "Customer Churn Status",
+       y="Count of Customers")+
+ theme_minimal(base_size = 14) +
+  theme(legend.position = "none") 
+
+churn_summary <- customer_data %>%
+  count(Churn) %>%
+  mutate(perc = n / sum(n) * 100)
+
+ggplot(churn_summary, aes(x = "", y = perc, fill = Churn)) +
+  geom_col(width = 1) +
+  scale_fill_manual(values = c("steelblue","navyblue")) +
+  coord_polar("y") +
+  labs(title = "Churn Proportion") +
+  theme_void() 
+
+
+# Churn rate by Contract -------------------------------------------------
+
+ggplot(customer_data, aes(x=Contract),fill = Churn)+
+  geom_bar(aes(fill=Churn),stat = "count",width = 0.5) +
+  scale_fill_viridis_d(option = "D") +
+  labs(title = "Churn rate by Contract",
+       x="Contract type",
+       y="Count of Customers") +
+  theme_minimal(base_size = 14)
+
+
+# Churn by Tenure ---------------------------------------------------------
+
+ggplot(customer_data,aes(x=tenure,fill = Churn))+
+  geom_histogram(binwidth = 5,position = "fill") +
+  scale_fill_viridis_d(option = "D") +
+  labs(title = "Churn rate by tenure",
+       x= "Tenure",
+       y="Proposition") +
+  theme_minimal(base_size = 14)
+
+
+
+# Monthly charges vs Churn ------------------------------------------------
+
+ggplot(customer_data,aes(x= MonthlyCharges,fill = Churn)) +
+  geom_density(alpha =0.5,stat= "density") +
+  labs(title = "Monthly Charges Distribution by Churn",
+       y="Density") +
+  theme_minimal(base_size = 14)
+
+
+
+# Total Charges by Churn --------------------------------------------------
+
+ggplot(customer_data,aes(x=Churn,y=TotalCharges)) +
+  geom_violin(aes(fill=Churn),stat = "ydensity",alpha=0.5) +
+  geom_boxplot(fill = NA,outliers = F,width=0.1,size = 0.5) +
+  labs(title = "Total charges by Churn",
+       x="Customer Churn Status",
+       y="Total Charges") +
+  scale_fill_viridis_d(option = "D") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none") 
+
+
+
+# Churn Rate by Internet Service ------------------------------------------
+
+ggplot(customer_data, aes(x = InternetService, fill = Churn)) +
+  geom_bar(position = "fill",width = 0.5) +
+  labs(title = "Churn Rate by Internet Service",
+       y="Proposition") +
+  scale_fill_viridis_d(option = "D") +
+  theme_minimal(base_size = 14) 
+
+
+# Churn rate vs Type of Payment -------------------------------------------
+
+payment_type <- customer_data %>% 
+  group_by(PaymentMethod) %>% 
+  summarise(count_customers = n())
+
+ggplot(payment_type,aes(x=PaymentMethod,y=count_customers,fill=PaymentMethod,color=PaymentMethod,))+
+  geom_segment(aes(x = PaymentMethod,xend = PaymentMethod,y=0,yend=count_customers),size = 2) +
+  geom_point(size=10,shape=21) +
+  scale_color_viridis_d() +
+  scale_fill_viridis_d() +
+  labs(title = "Churn rate based on Payment type",y="Count of Customers") +
+  theme_bw() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.title.x = element_text(face = "bold", size = 12),
+    axis.title.y = element_text(face = "bold", size = 12),
+    legend.position = "none") 
+
+
+# Churn rate by Billing Type ----------------------------------------------
+
+
+ggplot(customer_data,aes(x=Churn,fill=Churn))+
+  geom_bar(width=0.5)+
+  scale_fill_manual(values = c("olivedrab3","steelblue")) +
+  labs(title = "Churn rate by billing type",
+       x="Customer Churn status",
+       y="Count of Customers") +
+  theme_bw() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.title.x = element_text(face = "bold", size = 12),
+    axis.title.y = element_text(face = "bold", size = 12),
+    legend.position = "none")  +
+  facet_grid(~PaperlessBilling) 
