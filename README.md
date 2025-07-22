@@ -162,7 +162,7 @@ The dataset contains information about customer demographics, services subscribe
    
   **Churn distribution across Customers**
 
-    ![Customer Churn rate distribution.png](https://github.com/Saravanan-dataworks/Customer-Churn-Analysis/blob/main/Customer%20Churn%20rate%20distribution.png)
+   ![Churn rate by tenure](https://github.com/Saravanan-dataworks/Customer-Churn-Analysis/blob/main/Churn%20rate%20by%20tenure.png)
 
   **Contract Type Strongly Influences Churn**
 
@@ -170,7 +170,7 @@ The dataset contains information about customer demographics, services subscribe
    - This suggests that longer-term contracts may help reduce churn.
    - Promote vouchers for longer-term contracts.
 
-    ![Churn rate by Contract](https://github.com/Saravanan-dataworks/Customer-Churn-Analysis/blob/main/Churn%20rate%20by%20Contract.png)
+     ![Churn rate by Contract](https://github.com/Saravanan-dataworks/Customer-Churn-Analysis/blob/main/Churn%20rate%20by%20Contract.png)
 
   **Tenure is a Key Indicator**
   
@@ -205,7 +205,7 @@ The dataset contains information about customer demographics, services subscribe
     - Customers using fiber optic or DSL services churn more than those without internet service. 
     - This could point to service quality or pricing concerns.
 
-    ![Churn rate by Internet Service](https://github.com/Saravanan-dataworks/Customer-Churn-Analysis/blob/main/Churn%20rate%20by%20Internet%20Service.png)
+   ![Churn rate by Internet Service](https://github.com/Saravanan-dataworks/Customer-Churn-Analysis/blob/main/Churn%20rate%20by%20Internet%20Service.png)
 
 # Recommendations & Campaign ideas:
   **1. Target High-Risk Segments**
@@ -281,6 +281,9 @@ Make sure you have the necessary R packages installed:
 
 Set your working directory to the project folder:
   - setwd("path/to/your/cloned/folder")
+
+**5. Execute the codes**
+
+Run the codes to visualize the data points. 
    
   
-
