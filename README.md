@@ -1,7 +1,7 @@
 # Customer-churn
 
 ## 🎯Project Overview
-This project aims to analyze customer churn behavior and build a predictive model to identify customers at risk of leaving a service. The goal is to uncover key factors influencing churn and provide actionable insights for retention strategies.
+To understand the patterns and drivers of customer churn using visual exploration of customer attributes such as contract type, tenure, billing preferences, and service usage.
 
 ## 📁 Dataset Description
 The dataset contains information about customer demographics, services subscribed, account details, and whether the customer has churned. Key features include:
@@ -202,8 +202,8 @@ The dataset contains information about customer demographics, services subscribe
 
   **Internet Service Type Matters**
 
-    - Customers using fiber optic or DSL services churn more than those without internet service. 
-    - This could point to service quality or pricing concerns.
+   - Customers using fiber optic or DSL services churn more than those without internet service. 
+   - This could point to service quality or pricing concerns.
 
    ![Churn rate by Internet Service](https://github.com/Saravanan-dataworks/Customer-Churn-Analysis/blob/main/Churn%20rate%20by%20Internet%20Service.png)
 
