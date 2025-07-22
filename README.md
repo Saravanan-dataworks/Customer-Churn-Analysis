@@ -162,7 +162,7 @@ The dataset contains information about customer demographics, services subscribe
    
   **Churn distribution across Customers**
 
-   ![Churn rate by tenure](https://github.com/Saravanan-dataworks/Customer-Churn-Analysis/blob/main/Churn%20rate%20by%20tenure.png)
+   ![Customer Churn rate distribution.png](https://github.com/Saravanan-dataworks/Customer-Churn-Analysis/blob/main/Customer%20Churn%20rate%20distribution.png)
 
   **Contract Type Strongly Influences Churn**
 
@@ -210,57 +210,57 @@ The dataset contains information about customer demographics, services subscribe
 # Recommendations & Campaign ideas:
   **1. Target High-Risk Segments**
   
-    **Insight:** Customers with month-to-month contracts show significantly higher churn rates.
+  **Insight:** Customers with month-to-month contracts show significantly higher churn rates.
     
-   ** Action:**
+  **Action:**
     
-    - Introduce loyalty programs or discounts for customers who switch to longer-term contracts.
-    - Offer personalized retention incentives (e.g., free upgrades or reduced fees) for month-to-month customers.
+  - Introduce loyalty programs or discounts for customers who switch to longer-term contracts.
+  - Offer personalized retention incentives (e.g., free upgrades or reduced fees) for month-to-month customers.
         
   **2. Improve Customer Experience for Low-Tenure Users**
         
-    **Insight:** Churn is higher among customers with short tenure (e.g., <12 months).
+  **Insight:** Churn is higher among customers with short tenure (e.g., <12 months).
     
-    **Action:**
+  **Action:**
     
-    - Implement onboarding programs to engage new customers early.
-    - Use proactive customer support (e.g., check-ins, satisfaction surveys) during the first few months.
+  - Implement onboarding programs to engage new customers early.
+  - Use proactive customer support (e.g., check-ins, satisfaction surveys) during the first few months.
         
   **3. Review Pricing Strategy**
   
-    **Insight:** Customers with higher monthly charges tend to churn more.
+  **Insight:** Customers with higher monthly charges tend to churn more.
     
-    **Action:**
+  **Action:**
     
-    - Re-evaluate pricing tiers and ensure value alignment.
-    - Offer bundled services or discounts for high-paying customers to increase perceived value.
+  - Re-evaluate pricing tiers and ensure value alignment.
+  - Offer bundled services or discounts for high-paying customers to increase perceived value.
         
   **4. Address Internet Service Issues**
         
-    **Insight:** Churn varies significantly by Internet service type.
+  **Insight:** Churn varies significantly by Internet service type.
     
-    **Action:**
+  **Action:**
     
-    - Investigate service quality issues (e.g., speed, reliability) for high-churn service types.
-    - Provide service upgrades or satisfaction guarantees for affected customers.
+  - Investigate service quality issues (e.g., speed, reliability) for high-churn service types.
+  - Provide service upgrades or satisfaction guarantees for affected customers.
     
   **5. Optimize Payment Methods**
        
-    **Insight:** Certain payment methods are associated with higher churn.
-    
-    **Action:**
-    
-    - Encourage auto-pay or credit card payments through incentives (e.g., cashback, discounts).
-    - Simplify payment processes and improve transparency in billing.
+  **Insight:** Certain payment methods are associated with higher churn.
+
+  **Action:**
+
+  - Encourage auto-pay or credit card payments through incentives (e.g., cashback, discounts).
+  - Simplify payment processes and improve transparency in billing.
         
   **6. Promote Paperless Billing**
   
-    **Insight:** Customers using paperless billing may show different churn patterns.
+  **Insight:** Customers using paperless billing may show different churn patterns.
+  
+  **Action:**
     
-    **Action:**
-    
-    - Promote paperless billing with benefits like faster processing and eco-friendly messaging.
-    - Ensure digital billing platforms are user-friendly and reliable.
+  - Promote paperless billing with benefits like faster processing and eco-friendly messaging.
+  - Ensure digital billing platforms are user-friendly and reliable.
         
 ## 📂 Folder Overview
 - `scripts/` → Customer churn Analysis.txt
